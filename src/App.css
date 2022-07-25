@@ -1,0 +1,126 @@
+.app-root {
+
+  /* align-items: center; */
+  border: 1px solid black;
+  display: flex;
+  font-size: 4rem;
+  height: 640px;
+  justify-content: center;
+  width: 360px;
+}
+
+.main-profile {
+  display: block;
+  text-align: center;
+}
+
+.profile-info button {
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.footer {
+  bottom: 0;
+  display: block;
+  margin-bottom: 20px;
+  position: fixed;
+  text-align: center;
+}
+
+.start-button {
+  bottom: 0;
+  display: block;
+  margin-bottom: 20px;
+  position: fixed;
+  text-align: center;
+  z-index: 1000;
+}
+
+.img-card {
+  height: 50px;
+  width: 50px;
+}
+
+.recipe-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+.checkbox-checked {
+  text-decoration: line-through solid black;
+}
+
+.recipe-card h2 {
+  font-size: 1rem;
+}
+
+.recipe-cards {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* https://www.devmedia.com.br/como-criar-um-slider-com-css-e-html/37787 */
+.recipes-cards-recommended {
+  height: 100px;
+  width: 220px;
+}
+
+.recipes-cards-recommended li {
+  font-size: 10px;
+  list-style: none;
+  position: absolute;
+}
+
+.recipes-cards-recommended img {
+  height: 100px;
+  margin: 2em;
+  vertical-align: top;
+  width: 100px;
+}
+
+.recipes-cards-recommended input {
+  display: none;
+}
+
+.recipes-cards-recommended label {
+  background-color: black;
+  bottom: 10px;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  z-index: 10;
+}
+
+.recipes-cards-recommended li:nth-child( 1 ) label {
+  left: 10px;
+}
+
+.recipes-cards-recommended li:nth-child( 2 ) label {
+  left: 40px;
+}
+
+.recipes-cards-recommended li:nth-child( 3 ) label {
+  left: 70px;
+}
+
+/* .recipes-cards-recommended img {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.recipes-cards-recommended li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+} */
