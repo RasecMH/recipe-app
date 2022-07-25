@@ -5,7 +5,7 @@ import renderWithRouterAndRedux from './helpers/renderWithRouterAndRedux';
 import App from '../App';
 import fetchDrinks from './helpers/mocks/fetchDrinks';
 
-const fetchMock = require('../../cypress/mocks/fetch');
+const fetchMock = require('./helpers/mocks/fetch');
 
 const USER_EMAIL = "email@email.com";
 const USER_PASSWORD = "1234567A";

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouterAndRedux from './helpers/renderWithRouterAndRedux';
 import App from '../App';
 
-const fetchMock = require('../../cypress/mocks/fetch');
+const fetchMock = require('./helpers/mocks/fetch');
 
 const USER_EMAIL = "email@email.com";
 const USER_PASSWORD = "1234567A";

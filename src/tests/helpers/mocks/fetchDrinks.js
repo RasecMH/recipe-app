@@ -1,16 +1,16 @@
-const drinks = require('../../../../cypress/mocks/drinks');
-const oneDrink = require('../../../../cypress/mocks/oneDrink');
-const ginDrinks = require('../../../../cypress/mocks/ginDrinks');
-const ordinaryDrinks = require('../../../../cypress/mocks/ordinaryDrinks');
-const cocktailDrinks = require('../../../../cypress/mocks/cocktailDrinks');
-const milkDrinks = require('../../../../cypress/mocks/milkDrinks');
-const otherDrinks = require('../../../../cypress/mocks/otherDrinks');
-const cocoaDrinks = require('../../../../cypress/mocks/cocoaDrinks');
-const emptyDrinks = require('../../../../cypress/mocks/emptyDrinks');
-const drinkCategories = require('../../../../cypress/mocks/drinkCategories');
-const drinkIngredients = require('../../../../cypress/mocks/drinkIngredients');
-const drinksByIngredient = require('../../../../cypress/mocks/drinksByIngredient');
-const oneDrinkId15997 = require('../../../../cypress/mocks/oneDrinkId15997');
+const drinks = require('./drinks');
+const oneDrink = require('./oneDrink');
+const ginDrinks = require('./ginDrinks');
+const ordinaryDrinks = require('./ordinaryDrinks');
+const cocktailDrinks = require('./cocktailDrinks');
+const milkDrinks = require('./milkDrinks');
+const otherDrinks = require('./otherDrinks');
+const cocoaDrinks = require('./cocoaDrinks');
+const emptyDrinks = require('./emptyDrinks');
+const drinkCategories = require('./drinkCategories');
+const drinkIngredients = require('./drinkIngredients');
+const drinksByIngredient = require('./drinksByIngredient');
+const oneDrinkId15997 = require('./oneDrinkId15997');
 
 const fetchDrinks = (url) => Promise.resolve({
   status: 200,
