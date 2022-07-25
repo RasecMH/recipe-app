@@ -11,9 +11,9 @@ export const getMeals = async (name = '') => {
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?f={primeira-letra}
 export const getMealsByFisrtLetter = async (letter) => {
   // linhas 14-16 seria o tratamento do alert que permite a emissão do alert correto, pois, pelo que entendi temos que bloquear o retorno da api
-  if (letter.length > 1) {
-    return global.alert('Your search must have only 1 (one) character');
-  }
+  // if (letter.length > 1) {
+  //   return global.alert('Your search must have only 1 (one) character');
+  // }
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
   return response.json();
 };

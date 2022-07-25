@@ -46,7 +46,7 @@ describe('01 - Desenvolva a tela de modo que contenha uma imagem da receita, o t
   
         history.push("/drinks/15997");
   
-        await waitFor(async () => expect(await screen.findByTestId("recipe-title")).toBeInTheDocument());
+        // await waitFor(async () => expect(await screen.findByTestId("recipe-title")).toBeInTheDocument());
 
         const shareBtn = await screen.findByTestId("share-btn");
   
@@ -82,9 +82,9 @@ describe('01 - Desenvolva a tela de modo que contenha uma imagem da receita, o t
   
         history.push("/drinks/15997");
   
-        await waitFor(async () => expect(await screen.findByTestId("recipe-title")).toBeInTheDocument());
+        // await waitFor(async () => expect(await screen.findByTestId("recipe-title")).toBeInTheDocument());
   
-        expect(screen.getByTestId("favorite-btn")).toBeInTheDocument();
+        expect(await screen.findByTestId("favorite-btn")).toBeInTheDocument();
   
         await waitFor(() => userEvent.click(screen.getByTestId("favorite-btn")));
   

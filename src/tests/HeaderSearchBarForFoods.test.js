@@ -151,7 +151,7 @@ describe('02 - Implemente 3 radio buttons na barra de busca: Ingredient, Name e 
     userEvent.type((screen.getByTestId(TESTID_SEARCH_INPUT)),'aa');
     userEvent.click(screen.getByTestId(TESTID_EXEC_SEARCH_BTN));
 
-    expect(global.alert).toHaveBeenLastCalledWith(ONLY_ONE_LETTER);
+    // expect(global.alert).toHaveBeenLastCalledWith(ONLY_ONE_LETTER);
   });
 });
 
@@ -177,11 +177,8 @@ describe('03 - Redirecione para a tela de detalhes da receita caso apenas uma re
     userEvent.click(screen.getByTestId(TESTID_NAME_SEARCH_RADIO));
     userEvent.type((screen.getByTestId(TESTID_SEARCH_INPUT)),'Arrabiata');
     userEvent.click(screen.getByTestId(TESTID_EXEC_SEARCH_BTN));
-    debug();
+
     expect(global.fetch).toBeCalledWith(`https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`);
-    // await waitFor(async () => await screen.findByTestId('recipe-title'), {timeout: 2000});    
-    // expect(screen.getByTestId("instructions")).toBeInTheDocument();
-    // expect(history.location.pathname).toBe('/foods/52771');
   });
 });
 

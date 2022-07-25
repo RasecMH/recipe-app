@@ -17,7 +17,7 @@ const Cover = ({ isDrink }) => {
     setFavoriteRecipes,
   ] = useLocalStorage('favoriteRecipes', []);
 
-  console.log('mealDetails', mealDetails);
+    ('mealDetails', mealDetails);
 
   const history = useHistory();
   const pathSTR = history.location.pathname;
@@ -61,7 +61,7 @@ const Cover = ({ isDrink }) => {
       }]);
     }
   };
-  console.log(favoriteRecipes);
+    (favoriteRecipes);
 
   const getDrinkDetails = () => (
     <div>
