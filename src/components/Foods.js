@@ -31,7 +31,7 @@ const Foods = () => {
       <SelectionFilter />
       {
         mealsData && (
-          <div className="recipe-cards">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             {
               mealsData?.length === 1 && isSearch
                 ? history.push(`/foods/${mealsData[0]?.idMeal}`)

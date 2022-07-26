@@ -20,9 +20,10 @@ const ProfileInfo = () => {
   };
 
   return (
-    <div className="profile-info">
+    <div className="flex flex-col justify-center items-center h-full">
       <h2
         data-testid="profile-email"
+        className='mb-5'
       >
         { emailLS?.email }
       </h2>
@@ -30,6 +31,7 @@ const ProfileInfo = () => {
       <Link to="/done-recipes">
         <button
           type="button"
+          className='btn btn-active btn-primary'
           data-testid="profile-done-btn"
         >
           Done Recipes
@@ -41,6 +43,7 @@ const ProfileInfo = () => {
       <Link to="/favorite-recipes">
         <button
           type="button"
+          className='btn btn-active btn-primary'
           data-testid="profile-favorite-btn"
         >
           Favorite Recipes
@@ -52,6 +55,7 @@ const ProfileInfo = () => {
       <Link to="/">
         <button
           type="button"
+          className='btn btn-active btn-primary'
           data-testid="profile-logout-btn"
           onClick={ handleClick }
         >

@@ -56,12 +56,13 @@ const SelectionFilter = () => {
   };
 
   return (
-    <div>
+    <div className='flex flex-wrap items-baseline justify-center my-3 gap-2 mx-1'>
       <button
         type="button"
         id="All-category"
         name="All-category-filter"
         value=""
+        className='btn btn-active btn-primary w-28'
         data-testid="All-category-filter"
         onClick={ onClickButton }
       >
@@ -77,6 +78,8 @@ const SelectionFilter = () => {
             id={ `${categoryName}-category-filter` }
             name={ `${categoryName}-category-filter` }
             value={ categoryName }
+        className='btn btn-active btn-primary w-1/4'
+
             data-testid={ `${categoryName}-category-filter` }
             onClick={ handleToggle }
           >
@@ -91,6 +94,8 @@ const SelectionFilter = () => {
             id={ `${category}-category-filter` }
             name={ `${category}-category-filter` }
             value={ category }
+        className='btn btn-active btn-primary font-bold w-28'
+
             data-testid={ `${category}-category-filter` }
             onClick={ handleToggle }
           >

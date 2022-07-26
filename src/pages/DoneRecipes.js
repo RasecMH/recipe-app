@@ -5,9 +5,11 @@ import DoneRecipesCard from '../components/DoneRecipesCard';
 import DoneRecipesFilter from '../components/DoneRecipesFilter';
 
 const DoneRecipes = ({ history }) => (
-  <div>
+  <div className='h-full pt-24'>
     <Header title="Done Recipes" history={ history } />
-    <DoneRecipesFilter />
+    <div className='flex items-center justify-center mt-3'>
+      <DoneRecipesFilter />
+    </div>
     <DoneRecipesCard />
   </div>
 );

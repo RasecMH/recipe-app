@@ -29,7 +29,7 @@ const Drinks = () => {
       <SelectionFilter />
       {
         drinksData && (
-          <div className="recipe-cards">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             {
               drinksData?.length === 1
                 ? history.push(`/drinks/${drinksData[0]?.idDrink}`)

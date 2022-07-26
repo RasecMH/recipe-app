@@ -4,14 +4,24 @@ import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ id, idRecipe, title, image, isDrink }) => (
   <Link to={ isDrink ? `/drinks/${idRecipe}` : `/foods/${idRecipe}` }>
-    <div data-testid={ `${id}-recipe-card` } className="recipe-card">
-      <img
-        data-testid={ `${id}-card-img` }
-        src={ image }
-        alt={ title }
-        className="img-card"
-      />
-      <h2 data-testid={ `${id}-card-name` }>{title}</h2>
+    <div data-testid={ `${id}-recipe-card` }
+    className="
+    card
+    w-42
+    bg-base-100
+    shadow-xl">
+      <figure>
+        <img
+          data-testid={ `${id}-card-img` }
+          src={ image }
+          alt={ title }
+          className="h-36"
+        />
+      </figure>
+      <div class="card-body">
+
+      <h2 data-testid={ `${id}-card-name` } className='card-title justify-center'>{title}</h2>
+      </div>
     </div>
   </Link>
 );

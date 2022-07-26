@@ -8,11 +8,12 @@ const DoneRecipesFilter = () => {
     dispatch(sendFilterType(value));
   };
   return (
-    <div>
+    <div className='btn-group flex justify-center items-center'>
       <button
         data-testid="filter-by-all-btn"
         type="button"
         value=""
+        className='btn btn-primary'
         onClick={ handleClick }
       >
         All
@@ -21,6 +22,8 @@ const DoneRecipesFilter = () => {
         data-testid="filter-by-food-btn"
         type="button"
         value="food"
+        className='btn btn-primary'
+
         onClick={ handleClick }
 
       >
@@ -30,6 +33,8 @@ const DoneRecipesFilter = () => {
         data-testid="filter-by-drink-btn"
         type="button"
         value="drink"
+        className='btn btn-primary'
+
         onClick={ handleClick }
 
       >

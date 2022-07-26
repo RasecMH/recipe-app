@@ -12,18 +12,19 @@ import RecipeInProgress from './pages/RecipeInProgress';
 
 function App() {
   return (
-    <div className="app-root">
+    <div
+      >
       <Switch>
-        <Route exact path="/" component={ Login } />
-        <Route path="/profile" component={ Profile } />
-        <Route path="/done-recipes" component={ DoneRecipes } />
-        <Route path="/favorite-recipes" component={ FavoriteRecipes } />
-        <Route path="/foods/:id/in-progress" component={ RecipeInProgress } />
-        <Route path="/drinks/:id/in-progress" component={ RecipeInProgress } />
-        <Route path="/foods/:id" component={ RecipeDetails } />
-        <Route path="/drinks/:id" component={ RecipeDetails } />
-        <Route path="/foods" component={ Recipes } />
-        <Route path="/drinks" component={ Recipes } />
+        <Route exact path='/' component={Login} />
+        <Route path='/profile' component={Profile} />
+        <Route path='/done-recipes' component={DoneRecipes} />
+        <Route path='/favorite-recipes' component={FavoriteRecipes} />
+        <Route path='/foods/:id/in-progress' component={RecipeInProgress} />
+        <Route path='/drinks/:id/in-progress' component={RecipeInProgress} />
+        <Route path='/foods/:id' component={RecipeDetails} />
+        <Route path='/drinks/:id' component={RecipeDetails} />
+        <Route path='/foods' component={Recipes} />
+        <Route path='/drinks' component={Recipes} />
       </Switch>
     </div>
   );

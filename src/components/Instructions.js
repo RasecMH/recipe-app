@@ -9,6 +9,7 @@ const Instructions = ({ isDrink }) => {
   const getDrinkDetails = () => (
     <p
       data-testid="instructions"
+      className='text-left'
     >
       {drinkDetails.length > 0 && drinkDetails[0].strInstructions}
     </p>
@@ -17,6 +18,7 @@ const Instructions = ({ isDrink }) => {
   const getMealDetails = () => (
     <p
       data-testid="instructions"
+      className='text-left mx-3'
     >
       {mealDetails.length > 0 && mealDetails[0].strInstructions}
     </p>

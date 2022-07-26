@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
 import { sendSearchStatus } from '../redux/actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ title, search }) => {
   const history = useHistory();
@@ -15,29 +17,33 @@ const Header = ({ title, search }) => {
   };
 
   return (
-    <div>
-      <h2
-        data-testid="page-title"
-      >
-        {title}
-      </h2>
+    <div
+      className='
+    flex 
+    justify-between
+    items-center
+    px-3
+    pt-3
+    pb-3
+    bg-red-900
+    text-white
+    '>
       <button
-        type="button"
-        data-testid="profile-top-btn"
-        onClick={ () => history.push('/profile') }
-        src={ profileIcon }
-      >
-        <img src={ profileIcon } alt="profile-icon" />
+        type='button'
+        data-testid='profile-top-btn'
+        onClick={() => history.push('/profile')}
+        src={profileIcon}>
+        <FontAwesomeIcon icon={faUser} className='h-7' />
       </button>
-      { search && (
+      <h2 data-testid='page-title'>{title}</h2>
+      {search && (
         <button
           search
-          type="button"
-          data-testid="search-top-btn"
-          onClick={ handleSearchBtn }
-          src={ searchIcon }
-        >
-          <img src={ searchIcon } alt="search-icon" />
+          type='button'
+          data-testid='search-top-btn'
+          onClick={handleSearchBtn}
+          src={searchIcon}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className='h-7' />
         </button>
       )}
     </div>

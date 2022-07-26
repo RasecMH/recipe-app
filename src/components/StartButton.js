@@ -22,14 +22,14 @@ const StartButton = ({ id }) => {
     return true;
   };
   return (
-    <div>
+    <div className='flex justify-center items-center fixed bottom-1 left-1/2 right-1/2 z-50'>
       {
         checkDoneRecipes()
         && (
           <button
             type="button"
             data-testid="start-recipe-btn"
-            className="start-button"
+            className="btn btn-active btn-primary"
             onClick={ () => history.push(`/${id[1]}/${id[2]}/in-progress`) }
           >
             {

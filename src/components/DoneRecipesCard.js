@@ -21,58 +21,77 @@ const DoneRecipesCard = () => {
   };
 
   return (
-    <div>
+    <div className='flex flex-wrap items-baseline justify-center gap-5 mt-4 text-center h-full'>
       { favoriteRecipes
         .filter((doneRecipe) => doneRecipe.type.includes(filterType))
         .map((recipe, index) => (
-          <div key={ recipe.id }>
+          <div className='card w-36 bg-base-100 shadow-xl flex items-center justify-center' key={ recipe.id }>
+            
             { recipe.type === 'food'
               ? (
                 <Link
                   to={ `/foods/${recipe.id}` }
                 >
-                  <h3
-                    data-testid={ `${index}-horizontal-name` }
-                  >
-                    {recipe.name}
-                  </h3>
-                </Link>
-              )
-              : (
-                <Link
-                  to={ `/drinks/${recipe.id}` }
-                >
-                  <h3
-                    data-testid={ `${index}-horizontal-name` }
-                  >
-                    {recipe.name}
-                  </h3>
-                </Link>
-              )}
-            { recipe.type === 'food'
-              ? (
-                <Link
-                  to={ `/foods/${recipe.id}` }
-                >
-                  <img
-                    width="100px"
-                    src={ recipe.image }
-                    alt="img card"
-                    data-testid={ `${index}-horizontal-image` }
-                  />
+                  <figure>
+                    <img
+                      src={ recipe.image }
+                      alt="img card"
+                      data-testid={ `${index}-horizontal-image` }
+                    />
+                  </figure>
                 </Link>)
               : (
                 <Link
                   to={ `/drinks/${recipe.id}` }
                 >
-                  <img
-                    width="100px"
-                    src={ recipe.image }
-                    alt="img card"
-                    data-testid={ `${index}-horizontal-image` }
-                  />
+                  <figure>
+                    <img
+                      src={ recipe.image }
+                      alt="img card"
+                      data-testid={ `${index}-horizontal-image` }
+                    />
+                  </figure>
                 </Link>
               )}
+              <div className='flex justify-between w-full px-3'>
+                { recipe.type === 'food'
+                ? (
+                  <Link
+                    to={ `/foods/${recipe.id}` }
+                
+                  >
+                    <h3
+                      data-testid={ `${index}-horizontal-name` }
+                    >
+                      {recipe.name}
+                    </h3>
+                  </Link>
+                )
+                : (
+                  <Link
+                    to={ `/drinks/${recipe.id}` }
+                  >
+                    <h3
+                      data-testid={ `${index}-horizontal-name` }
+                    >
+                      {recipe.name}
+                    </h3>
+                  </Link>
+                )}
+                { clicked ? <p>Link copied!</p> : (
+                <button
+                  clicked={ clicked }
+                  type="button"
+                  onClick={ () => handleClick(recipe) }
+                >
+                  <img
+                    src={ shareIcon }
+                    width="15px"
+                    alt="share-icon"
+                    data-testid={ `${index}-horizontal-share-btn` }
+                  />
+                </button>)}
+              </div>
             { recipe.alcoholicOrNot
           && (
             <p data-testid={ `${index}-horizontal-top-text` }>
@@ -93,29 +112,20 @@ const DoneRecipesCard = () => {
             >
               {recipe.doneDate}
             </span>
-            { clicked ? <p>Link copied!</p> : (
-              <button
-                clicked={ clicked }
-                type="button"
-                onClick={ () => handleClick(recipe) }
+            
+            {
+              <div className='badge badge-outline mb-3'>
+              <p
+                data-testid={ `${index}-${recipe.tags[0]}-horizontal-tag` }
               >
-                <img
-                  src={ shareIcon }
-                  width="15px"
-                  alt="share-icon"
-                  data-testid={ `${index}-horizontal-share-btn` }
-                />
-              </button>)}
-            <p
-              data-testid={ `${index}-${recipe.tags[0]}-horizontal-tag` }
-            >
-              {recipe.tags[0]}
-            </p>
-            <p
-              data-testid={ `${index}-${recipe.tags[1]}-horizontal-tag` }
-            >
-              {recipe.tags[1]}
-            </p>
+                {recipe.tags[0]}
+              </p>
+              <p
+                data-testid={ `${index}-${recipe.tags[1]}-horizontal-tag` }
+              >
+                {recipe.tags[1]}
+              </p>
+            </div>}
           </div>
         ))}
     </div>

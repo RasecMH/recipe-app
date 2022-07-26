@@ -5,9 +5,8 @@ import Footer from '../components/Footer';
 import ProfileInfo from '../components/ProfileInfo';
 
 const Profile = ({ history }) => (
-  <div className="main-profile">
+  <div className="h-screen">
     <Header title="Profile" history={ history } />
-    <h1>Profile</h1>
     <ProfileInfo />
     <Footer />
   </div>

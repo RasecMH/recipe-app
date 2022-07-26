@@ -1,15 +1,15 @@
-.app-root {
+/* .app-root {
 
   /* align-items: center; */
-  border: 1px solid black;
+/* border: 1px solid black;
   display: flex;
   font-size: 4rem;
   height: 640px;
   justify-content: center;
   width: 360px;
-}
+} */
 
-.main-profile {
+/* .main-profile {
   display: block;
   text-align: center;
 }
@@ -40,8 +40,8 @@
 .img-card {
   height: 50px;
   width: 50px;
-}
-
+} */
+/* 
 .recipe-card {
   align-items: center;
   display: flex;
@@ -66,10 +66,10 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 /* https://www.devmedia.com.br/como-criar-um-slider-com-css-e-html/37787 */
-.recipes-cards-recommended {
+/* .recipes-cards-recommended {
   height: 100px;
   width: 220px;
 }
@@ -112,7 +112,7 @@ li {
 
 .recipes-cards-recommended li:nth-child( 3 ) label {
   left: 70px;
-}
+} */
 
 /* .recipes-cards-recommended img {
   opacity: 0;

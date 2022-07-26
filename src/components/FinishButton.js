@@ -32,11 +32,11 @@ const FinishButton = ({ ingredientsArray,
     history.push('/done-recipes');
   };
   return (
-    <div>
+    <div className='flex justify-center items-center fixed bottom-1 left-1/2 right-1/2'>
       <button
         type="button"
         data-testid="finish-recipe-btn"
-        className="start-button"
+        className="btn btn-active btn-primary"
         disabled={
           checkedIngredients !== ingredientsArray.length
         }

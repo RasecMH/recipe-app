@@ -45,14 +45,15 @@ const Ingredients = ({ ingredientsArray, measuresArray, recipeId }) => {
 
   return (
     <div>
-      <h2>Ingredients</h2>
+      <h2 className='text-center'>Ingredients</h2>
       <ul>
         {
           ingredientsArray.map((ingredient, i) => (
 
             isInProgress
               ? (
-                <li key={ `${i} ${ingredient[1]}` }>
+                <li key={ `${i} ${ingredient[1]}` }
+                className='text-center'>
                   <label
                     htmlFor={ `ingredient-list-${i}` }
                     className={ oldValue?.some((check) => check.includes(ingredient[1]))
@@ -61,6 +62,7 @@ const Ingredients = ({ ingredientsArray, measuresArray, recipeId }) => {
                   >
                     <input
                       type="checkbox"
+                      className='mr-2'
                       id={ `ingredient-list-${i}` }
                       onClick={ handleCheckbox }
                       onChange={ () => {} }
@@ -77,6 +79,7 @@ const Ingredients = ({ ingredientsArray, measuresArray, recipeId }) => {
                 <li
                   key={ `${ingredient[1]}` }
                   data-testid={ `${i}-ingredient-name-and-measure` }
+                  className='text-center'
                 >
                   {ingredient[1]}
                   {' '}

@@ -23,7 +23,7 @@ const FoodInProgress = () => {
     dispatch(getMealDetailsToState(idMeal[2]));
   }, []);
   return (
-    <div>
+    <div className='h-full'>
       <Cover isDrink={ false } />
       <Ingredients
         ingredientsArray={ ingredients }

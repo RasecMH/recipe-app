@@ -34,11 +34,13 @@ const FoodDetails = () => {
         measuresArray={ measures }
         recipeId={ mealDetails[0]?.idMeal }
       />
-      <Video
-        videoId={ mealDetails[0] !== undefined
-          ? mealDetails[0].strYoutube.split('v=')[1]
-          : '' }
-      />
+      <div  className='flex justify-center items-center'>
+        <Video
+          videoId={ mealDetails[0] !== undefined
+            ? mealDetails[0].strYoutube.split('v=')[1]
+            : '' }
+        />
+      </div>
       <StartButton id={ idMeal } />
       <Recommended
         isDrink={ false }

@@ -27,10 +27,8 @@ const DrinkDetails = () => {
 
   return (
     <div>
-      <h1>DrinkDetails</h1>
       { drinkDetails.length && <Cover isDrink /> }
       <Instructions isDrink />
-      <h1>Olá do DnrinkDetails</h1>
       <StartButton id={ idDrink } />
       <Ingredients
         ingredientsArray={ ingredients }

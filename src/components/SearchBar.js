@@ -39,52 +39,53 @@ const SeachBar = () => {
   };
 
   return (
-    <form onSubmit={ handleSubmit }>
+    <form className='flex flex-col justify-center items-center mt-1' onSubmit={ handleSubmit }>
       <input
         type="text"
         data-testid="search-input"
+        className='input input-bordered bg-gray-200'
         value={ filterInput }
         onChange={ ({ target: { value } }) => setFilterInput(value) }
       />
-      <label htmlFor="filterByIngredient">
-        <input
-          name="filter"
-          type="radio"
-          id="filterByIngredient"
-          data-testid="ingredient-search-radio"
-          onClick={ ({ target: { id } }) => setFilterRadio(id) }
-        />
-        Ingredient
-      </label>
-      <label htmlFor="filterByName">
-        <input
-          name="filter"
-          type="radio"
-          id="filterByName"
-          data-testid="name-search-radio"
-          onClick={ ({ target: { id } }) => setFilterRadio(id) }
-
-        />
-        Name
-      </label>
-      <label htmlFor="filterByFirstLetter">
-        <input
-          name="filter"
-          type="radio"
-          id="filterByFirstLetter"
-          data-testid="first-letter-search-radio"
-          onClick={ ({ target: { id } }) => setFilterRadio(id) }
-
-        />
-        First Letter
-      </label>
-      <button
-        type="submit"
-        data-testid="exec-search-btn"
-      >
-        Search
-
-      </button>
+      <div className='flex gap-2'>
+        <label htmlFor="filterByIngredient">
+          <input
+            name="filter"
+            type="radio"
+            id="filterByIngredient"
+            data-testid="ingredient-search-radio"
+            onClick={ ({ target: { id } }) => setFilterRadio(id) }
+          />
+          Ingredient
+        </label>
+        <label htmlFor="filterByName">
+          <input
+            name="filter"
+            type="radio"
+            id="filterByName"
+            data-testid="name-search-radio"
+            onClick={ ({ target: { id } }) => setFilterRadio(id) }
+          />
+          Name
+        </label>
+        <label htmlFor="filterByFirstLetter">
+          <input
+            name="filter"
+            type="radio"
+            id="filterByFirstLetter"
+            data-testid="first-letter-search-radio"
+            onClick={ ({ target: { id } }) => setFilterRadio(id) }
+          />
+          First Letter
+        </label>
+      </div>
+        <button
+          type="submit"
+          data-testid="exec-search-btn"
+          className='btn btn-active btn-secondary'
+        >
+          Search
+        </button>
     </form>
   );
 };
